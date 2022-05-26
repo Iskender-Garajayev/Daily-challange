@@ -1,0 +1,21 @@
+.header{
+  width: 100%;
+  height: 100px;
+  background: orange;
+  display: flex;
+}
+
+
+.header-logo{
+
+  width: 100px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.nav-bar a{
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: right;
+  word-spacing: 2px;
+}
