@@ -15,6 +15,7 @@ export default class Header extends Component {
             <a href='#'>about us</a>
             <a href='#'>contact</a>
         </div>
+      
       </div>
     )
   }
