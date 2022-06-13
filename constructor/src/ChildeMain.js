@@ -15,6 +15,7 @@ export default class ChildeMain extends Component {
   componentWillReceiveProps(nextProps) {
     console.log("ComponentWillReceiveProps Runned")
   }
+  // Created By "SCU"
   shouldComponentUpdate(nextProps, nextState) { 
     console.log("shouldComponentUpdate Runned")
     return false;
