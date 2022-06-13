@@ -17,16 +17,21 @@ export default class Main extends Component {
   // Created By "CDM"
   componentDidMount() {
     console.log("IV ComponentDidMount Runned")
-    setTimeout(() => {
-      this.setState({name:"Iskender"})
-    }, 3000);
+    // setTimeout(() => {
+    //   this.setState({name:"Iskender"})
+    // }, 3000);
+  }
+  changePropsVal=()=>{
+    this.setState({name:"Tomy New"})
   }
   render() {
     console.log("III Render")
     return (
-      <div>Main
+      <div>Main<br/>
         <b>{this.state.name}</b>
-        <ChildeMain/>
+        <h3>{this.props.testProps}</h3>
+        <ChildeMain name={this.state.name}/>
+        <button onClick={this.changePropsVal}>Change Props Value</button>
       </div>
     )
   }

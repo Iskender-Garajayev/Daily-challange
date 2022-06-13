@@ -12,12 +12,20 @@ export default class ChildeMain extends Component {
   componentWillMount() {
     console.log("Child ComponentWillMount Runned")
   }
+  componentWillReceiveProps(nextProps) {
+    console.log("ComponentWillReceiveProps Runned")
+  }
+  shouldComponentUpdate(nextProps, nextState) { 
+    console.log("shouldComponentUpdate Runned")
+    return false;
+   }
   render() {
     console.log("Child Render Runned")
 
     return (
       <div>
         ChildeMain
+        <h2>Props: {this.props.name}</h2>
       </div>
     )
   }
