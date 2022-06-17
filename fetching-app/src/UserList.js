@@ -1,19 +1,23 @@
 import React, { Component } from 'react'
 
 export default class UserList extends Component {
-  state={users:[]}
+  state={users:[], isLoading : true}
 
   // Created By "cdm"
   componentDidMount() { 
-    fetch('https://jsonplaceholder.typicode.com/users')
+    setTimeout(() => {
+      fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
-    .then(jsonData => this.setState({users:jsonData}))
+    .then(jsonData => this.setState({users:jsonData, isLoading:false}))
+    }, 3000);
    }
   render() {
+    const {isLoading, users}=this.state
     return (
       <div>
         <h1>Users</h1>
-        {this.state.users.map((item)=>(<div key={item.id}>{item.name}</div>))}
+        {isLoading === true ? 'Loading ...' : users.map((item)=>(<div key={item.id}>{item.name}</div>))}
+        {/* {this.state.users.map((item)=>(<div key={item.id}>{item.name}</div>))} */}
       </div>
     )
   }
