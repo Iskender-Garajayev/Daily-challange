@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
-
+import axios from 'axios'
 export default class UserList extends Component {
   state={users:[], isLoading : true}
 
   // Created By "cdm"
   componentDidMount() { 
     setTimeout(() => {
-      fetch('https://jsonplaceholder.typicode.com/users')
-    .then(response => response.json())
-    .then(jsonData => this.setState({users:jsonData, isLoading:false}))
+    //   fetch('https://jsonplaceholder.typicode.com/users')
+    // .then(response => response.json())
+    // .then(jsonData => this.setState({users:jsonData, isLoading:false}))
+      axios.get('https://jsonplaceholder.typicode.com/users')
+      // .then(result => console.log(result.data))
+      .then(jsonData => this.setState({users:jsonData.data, isLoading:false}))
     }, 3000);
    }
   render() {
