@@ -17,18 +17,25 @@ export default class ChildeMain extends Component {
   }
   // Created By "SCU"
   shouldComponentUpdate(nextProps, nextState) { 
-    console.log("shouldComponentUpdate Runned")
-    if (nextState.number>30) {
-    return true;
+    console.log("Child ShouldComponentUpdate Runned nextProps", nextProps, "nextState:", nextState)
+
+    if (nextState.number>3) {
+    return true;// Enable Render
     } else {
-    return false;
+    return false;// Disable Render
     }
    }
 
   //  Created By CWUP
    componentWillUpdate(nextProps, nextState){
-    console.log("ComponentWillUpdate Runned")
+    console.log("Child ComponentWillUpdate Runned nextProps", nextProps, "nextState:", nextState)
    }
+
+   // Created By "CDUP"
+   componentDidUpdate(prevProps, prevState) { 
+    console.log("Child componentDidUpdate Runned prevProps", prevProps, "prevState:", prevState)
+    
+   } 
 
    state={number:0}
    changeNumber=(event)=>{this.setState({number:event.target.value})}
