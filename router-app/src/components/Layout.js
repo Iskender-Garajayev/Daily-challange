@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Layout extends Component {
   render() {
     return (
-      <div>Layout</div>
+      <h2>Layout</h2>
     )
   }
 }
