@@ -11,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/" render={()=>{return <h1>Home Page</h1>}}/>
           <Route path="/Home" render={()=>{return <h1>Home Page</h1>}}/>
-          <Route path="/Main" exact strict component={<Main/>} />
+          <Route path="/Main" exact strict component={Main} />
           <Route path="/Main" exact strict element={<UserList/>} />
         </Routes>       
       </div>
