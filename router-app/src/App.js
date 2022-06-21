@@ -19,6 +19,9 @@ function App() {
     <NavLink activeStyle={{color: "red"}} to="/nopage" >NoPage</NavLink><br/>
     {/* <NavLink activeStyle={{color: 'orange'}} to="/nopage1" >NoPage1</NavLink><br/> */}
     {/* <NavLink activeStyle={{color:'red'}} to="/nopage2" >NoPage2</NavLink><br/> */}
+
+
+
     <Routes>
       <Route path="/leyout" element={<Layout />}/>
       <Route index element={<Home />} />
