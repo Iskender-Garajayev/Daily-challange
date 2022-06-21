@@ -16,7 +16,7 @@ function App() {
     <Link to="/leyout" >Leyout</Link><br/>
     <Link to="/blogs" >Blogs</Link><br/>
     <Link to="/contact" >Contact</Link><br/>
-    <NavLink  to="/nopage" >NoPage</NavLink><br/>
+    <NavLink activeStyle={{color: "red"}} to="/nopage" >NoPage</NavLink><br/>
     {/* <NavLink activeStyle={{color: 'orange'}} to="/nopage1" >NoPage1</NavLink><br/> */}
     {/* <NavLink activeStyle={{color:'red'}} to="/nopage2" >NoPage2</NavLink><br/> */}
     <Routes>
