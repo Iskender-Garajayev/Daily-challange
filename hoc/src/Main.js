@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import Posts from './Posts'
 
 export default class Main extends Component {
   state={posts:[], loading:true}
@@ -8,7 +9,7 @@ export default class Main extends Component {
       .than(k=>k.data)
       .than(result=> {
         setTimeout(() => {
-          this.setState({posts:result,loading:false})
+          this.setState({posts:result, loading:false })
         }, 2000);
       })
   }
@@ -16,8 +17,9 @@ export default class Main extends Component {
     console.log(this.state.posts)
     return (
       <div>
-        Main Component
-        {this.state.loading === true ? 'Loading.........' : 'Data Is Here.....'}
+        <h2>Main Component</h2>
+        {/* {this.state.loading === true ? 'Loading.........' : 'Data Is Here.....'} */}
+        <Posts {...this.state}/>
       </div>
     )
   }
