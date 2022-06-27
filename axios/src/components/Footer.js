@@ -3,7 +3,7 @@ import './Footer.css'
 
 function Footer() {
   return (
-    <div>
+    <div className='main_footer'>
        <div className='footer'>
         <ul className='footer_c'>
           <li>Company</li>
@@ -18,8 +18,8 @@ function Footer() {
           <li><a href="mailto:garajayev@mail.com">Send Email</a></li>
           <li>Lorem.</li>
         </ul>
-
        </div>
+       <p>&copy;Garajayev</p>
     </div>
   )
 }
