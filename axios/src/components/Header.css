@@ -1,0 +1,19 @@
+.header_logo{
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar_logo{
+  width: 80px;
+  height: 80px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.navbar ul li{
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 30px;
+  margin-top: 20px;
+  
+}
