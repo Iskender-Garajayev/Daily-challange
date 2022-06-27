@@ -1,3 +1,9 @@
+.header{
+  background: rgb(182, 178, 182);
+  height: 120px;
+}
+
+
 .header_logo{
   display: flex;
   justify-content: space-between;
@@ -7,13 +13,23 @@
   width: 80px;
   height: 80px;
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .navbar ul li{
   display: inline-block;
   list-style-type: none;
   margin-right: 30px;
-  margin-top: 20px;
+  margin-top: 8px;
+  cursor: pointer;
   
+}
+
+.search_bar{
+  margin-top: 40px;
+  margin-right: 20px;
+  border-radius: 25px;
+  width: 200px;
+  height: 20px;
+  background: rgb(211, 198, 174);
 }
