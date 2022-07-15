@@ -1,26 +1,27 @@
-import React, { Component } from 'react'
-import axios from 'axios'
-import Posts from './Posts'
+import React, { Component } from "react";
+import axios from "axios";
+import Posts from "./Posts";
 
 export default class Main extends Component {
-  state={posts:[], loading:true}
+  state = { posts: [], loading: true };
   componentWillMount() {
-    axios.get('https://jsonplaceholder.typicode.com/posts')
-      .than(k=>k.data)
-      .than(result=> {
+    axios
+      .get("https://jsonplaceholder.typicode.com/posts")
+      .than((k) => k.data)
+      .than((result) => {
         setTimeout(() => {
-          this.setState({posts:result, loading:false })
+          this.setState({ posts: result, loading: false });
         }, 2000);
-      })
+      });
   }
   render() {
-    console.log(this.state.posts)
+    console.log(this.state.posts);
     return (
       <div>
         <h2>Main Component</h2>
         {/* {this.state.loading === true ? 'Loading.........' : 'Data Is Here.....'} */}
-        <Posts {...this.state}/>
+        <Posts {...this.state} />
       </div>
-    )
+    );
   }
 }
