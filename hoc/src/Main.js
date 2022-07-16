@@ -15,7 +15,7 @@ export default class Main extends Component {
       });
   }
   render() {
-    // console.log(this.state.posts)
+    console.log(this.state.posts);
     return (
       <div>
         <h2>Main Component</h2>

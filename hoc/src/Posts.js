@@ -4,8 +4,8 @@ export default class Posts extends Component {
   render() {
     return (
       <div>
-        {this.props.loading ? <div>1</div> : <div>2</div>}
-        {this.props.posts ? <div>1</div> : <div>2</div>}
+        {/* {this.props.loading ? <div>Loading....</div> : } */}
+        {this.props.loading ? <div>Loading....</div> : this.props.posts.map (item=> <div key={item.id} >{item.title}</div>) }
       </div>
     )
   }
